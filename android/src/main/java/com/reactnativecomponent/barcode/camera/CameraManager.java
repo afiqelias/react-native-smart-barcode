@@ -223,7 +223,11 @@ private final Context context;
     if (camera != null && previewing) {
       autoFocusCallback.setHandler(handler, message);
       //Log.d(TAG, "Requesting auto-focus callback");
-      camera.autoFocus(autoFocusCallback);
+      try {
+        camera.autoFocus(autoFocusCallback);
+      }
+      catch (RuntimeException re) {
+      }
 
     }
   }
