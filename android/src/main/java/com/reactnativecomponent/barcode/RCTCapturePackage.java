@@ -29,6 +29,10 @@ public class RCTCapturePackage implements ReactPackage {
         captureManager = new RCTCaptureManager();
     }
 
+     public List<Class<? extends JavaScriptModule>> createJSModules() {
+        return Collections.emptyList();
+    }
+
 
     @Override
         public List<NativeModule> createNativeModules(ReactApplicationContext reactApplicationContext) {
