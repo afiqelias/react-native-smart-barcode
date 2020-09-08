@@ -12,6 +12,8 @@ import React, {
 import {
     View,
     requireNativeComponent,
+    NativeModules,
+    AppState,
     Platform,
 } from 'react-native'
 import PropTypes from 'prop-types'
